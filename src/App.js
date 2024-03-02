@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import "./assets/fonts/DMM.ttf"
 import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import Test from './pages/Test';
+import Kartikey from "./pages/Kartikey";
+import Lakshay from "./pages/Laskhay";
+import Aviral from "./pages/Aviral";
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Router>
+    <Routes>
+       <Route path="/" element={<Home/>}   />
+       <Route path="/test" element={<Test/>}   />
+       <Route path="/aviral" element={<Aviral/>}   />
+       <Route path="/lakshay" element={<Lakshay/>}   />
+       <Route path="/kartikey" element={<Kartikey/>}   />
+    </Routes>
+    </Router>
     </div>
   );
 }
